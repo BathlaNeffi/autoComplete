@@ -1,0 +1,111 @@
+.input__container{
+    width: 300px;
+
+}
+
+form{
+    position: relative;
+}
+
+@media screen and (max-width: 480px) {
+    .input__container{
+        width: 200px;
+    }
+}
+
+.form__input{
+    background-color:transparent;
+    height: 56px;
+    width: 100%;
+    border: none;
+    border:1px solid #8f8f8f;
+    border-radius: 5px;
+    text-align: left;
+    padding:0px 50px 0px 10px;
+    font-size: 1.4rem;
+    color: #fff;
+   
+}
+.form__input:hover{
+    border:1px solid #fff;
+}
+
+
+
+.input__label{
+    content: "Type";
+position: absolute;
+top: 25%;
+left: 10px;
+font-size: 1.4rem;
+color: #8f8f8f;
+pointer-events: none;
+transition: all 0.3s ease-in-out;
+
+}
+
+.form__input:focus + .input__label{
+    content: "New Content";
+    font-size: 12px;
+    top: -20%;
+    color: #fff;
+    padding: 1px;
+    background-color: #282c34;
+    z-index: 1;
+}
+
+
+
+.active__input{
+position: absolute;
+left: 10px;
+font-size: 1.4rem;
+color: #8f8f8f;
+pointer-events: none;
+transition: all 0.3s ease-in-out;
+font-size: 12px;
+top: -20%;
+color: #fff;
+padding: 1px;
+background-color: #282c34;
+z-index: 1;
+}
+
+.suggestion{
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0 50px 0 10px;
+    border-top: 1px solid #d4d4d4;
+    background-color: #f7f7f7;
+    border-radius: 0 0 10px 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.suggestion li {
+    list-style: none;
+    padding: 10px;
+    cursor: pointer;
+    color:#282c34 ;
+    transition: font-size 0.3s ease;
+}
+
+.suggestion li:hover, .selected {
+    background-color: #d4d4d4;
+    font-weight: 700;
+}
+
+.form__clearInput{
+    position: absolute;
+    cursor: pointer;
+    color: #d4d4d4;
+    top:20%;
+    right: -18%;
+    background-color: #282c34;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: 900;
+    border: none;
+    margin: 0;
+}
